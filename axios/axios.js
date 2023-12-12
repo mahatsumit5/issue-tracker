@@ -1,7 +1,6 @@
 import axios from "axios";
-const url = "http://localhost:3000/api/issues";
+const url = "/api/issues";
 export const createNewIssue = async (issueObj) => {
-  const { data } = axios.post(url, issueObj);
-  console.log(data);
+  const { data } = await axios.post(url, issueObj);
   return data;
 };
